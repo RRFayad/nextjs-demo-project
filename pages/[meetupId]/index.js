@@ -35,7 +35,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false, // fallback to false indicates that we mapped all the support paths in our paths property
+    fallback: 'blocking', // fallback to false indicates that we mapped all the support paths in our paths property
     paths: meetups.map((meetup) => {
       return {
         params: {
